@@ -13,13 +13,13 @@
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
 
 
-        <link rel="stylesheet"  href="styles.css">
+        <link rel="stylesheet"  href="css/styles.css">
 
     <title>Ristorante Con Fusion</title>
 </head>
 
 <body>
-<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+<nav class="navbar navbar-inverse navbar-expand-sm fixed-top">
 <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
          <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
       
     </ul>
     <span class="navbar-text">
-        <a data-toggle="modal" data-target="#loginModal">
+        <a id="loginButton">
             <span class="fa fa-sign-in"></span>Login
         </a>
     </span>
@@ -292,8 +292,15 @@
        $('#carouselButton').children('span').addClass('fa-pause');
 
        }
-
+       
 });
+$('#loginButton').click(function() {
+        $('#loginModal').modal('show');
+      });
+      $('#reserveButton').click(function() {
+        $('#reserve').modal('show');
+      });
+
 
 
   });
